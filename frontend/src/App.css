@@ -1,0 +1,13 @@
+ul {
+  margin: 0;
+}
+a:hover {
+  text-decoration: none;
+}
+.css-4pdmu4-MuiBreadcrumbs-ol {
+  justify-content: center;
+  font-family: "Cabin", "Poppins", sans-serif;
+}
+body {
+  font-weight: 300 !important;
+}

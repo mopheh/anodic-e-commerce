@@ -1,0 +1,344 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+  letter-spacing: normal !important;
+}
+
+.top-bar {
+  background-color: #2aadc5;
+}
+.top-bar,
+header .navbar {
+  position: relative;
+  z-index: 13;
+}
+.top-bar ul {
+  list-style-type: none;
+}
+.top-bar li {
+  color: #fff;
+  letter-spacing: normal;
+  font-weight: 400;
+  font-size: 12px;
+  display: inline-block;
+}
+.top-container {
+  padding: 0 4.5rem;
+}
+.icons {
+  display: flex;
+  justify-content: flex-end;
+}
+.icons li {
+  padding: 0 8px;
+}
+.navbar {
+  padding: 0;
+}
+.head {
+  flex-basis: 32%;
+  font-weight: 600;
+  text-transform: lowercase;
+  font-family: inherit;
+  font-size: 2rem;
+  line-height: 1.8;
+  letter-spacing: normal;
+}
+.navbar-light .pl-5.navbar-nav .nav-link {
+  margin: 0 2px;
+}
+.navbar-light .pl-5.navbar-nav .nav-link:hover {
+  background-color: #0000000f;
+}
+.right-bar {
+  font-size: 16px;
+}
+
+.carousel {
+  background-color: #f5f5f5;
+}
+
+.carousel-item {
+  height: 600px;
+}
+
+h2,
+h5,
+h4,
+h6,
+h3,
+h1 {
+  letter-spacing: normal;
+}
+
+.form-control:focus-within,
+.form-control:focus,
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.carousel-caption {
+  color: #6b6b6b;
+  bottom: 0;
+  left: 10%;
+  right: 50%;
+  top: 30%;
+  text-align: left;
+  height: fit-content;
+}
+.carousel-caption h3 {
+  letter-spacing: -2px;
+  font-size: 3rem;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.carousel-caption p {
+  font-size: 18px;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+.carousel-caption a {
+  font-size: 15px;
+  color: #6b6b6b;
+  border-bottom: 1px solid #6b6b6b;
+  font-weight: 500;
+  transition: all ease 0.3ms;
+}
+.carousel-caption a:hover {
+  text-decoration: none;
+  color: #876066;
+  border-bottom: 1px solid #876066;
+  transition: all ease 0.2ms;
+}
+.mt-4 h1 {
+  line-height: 1.2;
+  font-size: 34px;
+  letter-spacing: 0.8px;
+  font-weight: 400;
+}
+.card {
+  padding: 0 !important;
+  border: 0;
+}
+.card-body {
+  padding: 0.75rem;
+}
+.card-body h5 {
+  letter-spacing: normal;
+  color: #747474;
+  font-weight: 500;
+}
+.card-title {
+  margin-bottom: 0.5rem;
+}
+.card-body a:hover {
+  text-decoration: none;
+  color: #2aadc5;
+}
+.card img {
+  transition: all ease-in-out 0.6s;
+  position: relative;
+}
+.card img:hover {
+  transform: scale(1.05);
+  transition: all ease-in-out 0.5s;
+  opacity: 0.6;
+}
+.cover {
+  position: relative;
+}
+.wishlist,
+.wishlist-section {
+  position: absolute;
+  top: 4%;
+  right: 4%;
+}
+.wishlist-screen,
+.wishlist,
+.wishlist-section {
+  padding: 7px 10px 5px;
+  font-size: 16px;
+  background-color: #fff;
+  border-radius: 50px;
+  transition: all ease 0.2ms;
+}
+.wishlist:hover,
+.wishlist-screen:hover,
+.wishlist-section:hover {
+  background-color: #000;
+}
+
+.wishlist:hover i,
+.wishlist-screen:hover i,
+.wishlist-section:hover i {
+  color: #fff;
+}
+
+.wishlist:before,
+.wishlist-section::before {
+  content: attr(data-hover);
+  font-size: 14px;
+  visibility: hidden;
+  opacity: 0;
+  width: 140px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  z-index: 1;
+  bottom: 2%;
+  right: 120%;
+}
+
+.wishlist-section {
+  font-size: 13px;
+  padding: 5px 10px;
+}
+
+.wishlist-section::before {
+  width: 180px;
+}
+
+.ronded-lg {
+  border-radius: 50px;
+}
+
+.wishlist:hover:before {
+  content: "Add to Wishlist";
+  opacity: 1;
+  visibility: visible;
+}
+
+.wishlist-section:hover:before {
+  content: "Remove from Wishlist";
+  opacity: 1;
+  visibility: visible;
+}
+
+.w-20 {
+  width: 20px;
+}
+
+.px-10 {
+  padding: 2rem 6rem 0;
+}
+.notification-sign {
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  top: 8px;
+  right: 6px;
+}
+.cart h1,
+.cart h2 {
+  font-family: "Cabin", "Karla", sans-serif;
+}
+.cart,
+.text-center {
+  font-weight: 300;
+}
+.blur {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  color: #ffffff83;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  backdrop-filter: blur(3px);
+  z-index: 11;
+}
+.form-div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 12;
+}
+
+.form-body {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 1.5rem 2.5rem 1rem;
+  font-family: "Cabin", "Cairo", "Courier New", Courier, monospace;
+  width: 50%;
+  box-shadow: rgb(33 33 33 / 6%) 0 4px 24px 5px;
+}
+
+.form-body h2 {
+  font-weight: 600;
+  color: #4d085e;
+}
+::placeholder {
+  font-family: "Josefin Sans", "Lucida Sans", "Lucida Sans Regular",
+    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.btn-primary {
+  background-color: #23a8d2;
+}
+@media (max-width: 900px) {
+  .form-body {
+    width: 90%;
+    padding: 1.5rem 1.2rem 2rem;
+  }
+}
+.wishlist-header h1 {
+  font-weight: 300;
+  font-size: 3rem;
+  font-family: "Poppins", "Cabin";
+  letter-spacing: normal;
+}
+
+.container h2,
+section h2 {
+  font-weight: 400;
+
+  font-family: "Cabin", "Cairo", "Courier New", Courier, monospace;
+}
+.container.order {
+  font-weight: 200;
+}
+.container.order strong {
+  font-family: "Rubik";
+}
+#adminmenu {
+  font-size: 12px;
+}
+.row h5,
+.order-product strong {
+  font-family: "Cabin";
+  font-weight: 300;
+}
+
+.mb-5 {
+  margin-bottom: 6rem !important;
+}
+
+.f-300 {
+  font-weight: 300;
+}
+.css-1fuz9qr-MuiPaper-root-MuiAlert-root {
+  font-family: "Poppins", sans-serif !important;
+}
+.css-1hv8oq8-MuiStepLabel-label.MuiStepLabel-alternativeLabel {
+  margin-top: 5px;
+  font-family: "Poppins", "Cabin", "Cairo", "Courier New", Courier, monospace;
+}
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed,
+.navbar-light .navbar-nav .nav-link.active {
+  color: #23a8d2 !important;
+}
+.container .table-responsive {
+  font-weight: 300 !important;
+}
