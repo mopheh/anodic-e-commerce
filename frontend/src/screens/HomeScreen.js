@@ -30,7 +30,7 @@ function HomeScreen() {
   return (
     <>
       <ItemCarousel />
-      <Container className="mt-4 mb-5 pb-3">
+      <Container className="mt-4 mb-5 pb-3 px-sm-5">
         <h1>
           <span className="d-block" style={{ color: "#b2b2b2" }}>
             Top
@@ -43,7 +43,7 @@ function HomeScreen() {
           <Alert severity="error">{error}</Alert>
         ) : (
           <>
-            <Row>
+            <Row className="top-product-row">
               {products.map((product) => (
                 <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
                   <Product product={product} section="home" />

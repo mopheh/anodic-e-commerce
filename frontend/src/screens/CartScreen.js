@@ -45,7 +45,7 @@ const CartScreen = () => {
   }
 
   return (
-    <Container className="my-3 cart">
+    <Container className="my-3 mb-5 cart">
       <Row>
         <Col md={8}>
           <h1>Shopping Cart</h1>
@@ -58,14 +58,16 @@ const CartScreen = () => {
               {cartItems.map((item) => (
                 <ListGroup.Item key={item.product}>
                   <Row>
-                    <Col md={2}>
+                    <Col lg={2} md={2}>
                       <Image src={item.image} alt={item.name} fluid rounded />
                     </Col>
-                    <Col md={3}>
+                    <Col lg={3} md={3}>
                       <Link to={`/product/${item.product}`}>{item.name}</Link>
                     </Col>
-                    <Col md={2}>₦{formatToCurrency(item.price)}</Col>
-                    <Col md={3}>
+                    <Col lg={2} md={2}>
+                      ₦{formatToCurrency(item.price)}
+                    </Col>
+                    <Col lg={3} md={3} sm={6} className="increment">
                       <div className="d-flex">
                         <Button
                           variant="dark"
@@ -101,7 +103,7 @@ const CartScreen = () => {
                         </Button>
                       </div>
                     </Col>
-                    <Col md={1}>
+                    <Col md={1} sm={6}>
                       <Button
                         type="button"
                         variant="light"

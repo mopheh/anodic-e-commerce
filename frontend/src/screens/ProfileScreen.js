@@ -64,7 +64,7 @@ const ProfileScreen = () => {
   }
 
   return (
-    <Container className="my-3">
+    <Container className="my-3 mb-5">
       <Button
         variant="primary"
         onClick={logoutUser}
@@ -72,7 +72,7 @@ const ProfileScreen = () => {
       >
         Log Out
       </Button>
-      <Row>
+      <Row className="profile-row">
         <Col md={3}>
           <h2>My Profile</h2>
           {success && <Alert severity="success">Profile Updated</Alert>}

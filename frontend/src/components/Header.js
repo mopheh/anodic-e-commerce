@@ -1,7 +1,8 @@
 import React from "react"
-import { Row, Col, Nav, Navbar, NavDropdown } from "react-bootstrap"
+import { Row, Col, Nav, Navbar, NavDropdown, Container } from "react-bootstrap"
 import { useSelector } from "react-redux"
 import { LinkContainer } from "react-router-bootstrap"
+import MobileDrawer from "./MobileDrawer"
 
 function Header() {
   const wishlist = useSelector((state) => state.wishlist)
@@ -14,8 +15,8 @@ function Header() {
     <>
       <div className="top-bar">
         <div className="top-container">
-          <Row className="py-2">
-            <Col>
+          <Row className="py-2 align-items-center">
+            <Col md={8} sm={12}>
               <ul>
                 <li className="border-right pr-3">
                   <a href="tel:+2349013795693" className="text-white">
@@ -29,7 +30,7 @@ function Header() {
                 </li>
               </ul>
             </Col>
-            <Col className="icons">
+            <Col className="icons" md={4} sm={12}>
               <ul>
                 <li>
                   <i className="fab fa-facebook-f"></i>
@@ -49,32 +50,36 @@ function Header() {
         </div>
       </div>
       <header>
-        <Navbar bg="light" className="px-5" variant="light" collapseOnSelect>
+        <Navbar
+          bg="light"
+          className="px-5"
+          expand="lg"
+          variant="light"
+          collapseOnSelect
+        >
           <>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="pl-5">
-                <LinkContainer to="/collections/games">
-                  <Nav.Link>Games</Nav.Link>
-                </LinkContainer>
-                <LinkContainer to="/collections/computers">
-                  <Nav.Link>Computers</Nav.Link>
-                </LinkContainer>
-                <LinkContainer to="/collections/tv">
-                  <Nav.Link>TV & AV</Nav.Link>
-                </LinkContainer>
-                <LinkContainer to="/collections/home-appliances">
-                  <Nav.Link>Home Appliances</Nav.Link>
-                </LinkContainer>
-                <LinkContainer to="/collections/phones">
-                  <Nav.Link>Phones</Nav.Link>
-                </LinkContainer>
-              </Nav>
-            </Navbar.Collapse>
+            <Nav className="pl-lg-5 pl-md-4 lg-nav">
+              <LinkContainer to="/collections/games">
+                <Nav.Link>Games</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/collections/computers">
+                <Nav.Link>Computers</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/collections/tv">
+                <Nav.Link>TV & AV</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/collections/home-appliances">
+                <Nav.Link>Home Appliances</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/collections/phones">
+                <Nav.Link>Phones</Nav.Link>
+              </LinkContainer>
+            </Nav>
+
             <LinkContainer to="/">
               <Navbar.Brand className="mx-auto head">anodic.</Navbar.Brand>
             </LinkContainer>
-            <Nav className="ml-auto right-bar pr-5">
+            <Nav className="ml-auto right-bar pr-lg-5 pr-md-4 lg-nav">
               <LinkContainer to="/search">
                 <Nav.Link>
                   <i className="fa-solid fa-magnifying-glass"></i>
@@ -117,6 +122,7 @@ function Header() {
             </Nav>
           </>
         </Navbar>
+        <MobileDrawer />
       </header>
     </>
   )

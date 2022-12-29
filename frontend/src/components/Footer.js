@@ -3,7 +3,12 @@ import { Navbar, Nav } from "react-bootstrap"
 
 function Footer() {
   return (
-    <Navbar bg="light" className="px-5 py-2" variant="light" fixed="bottom">
+    <Navbar
+      bg="light"
+      className="px-5  foot py-2"
+      variant="light"
+      fixed="bottom"
+    >
       <h6 className="mb-0">All Rights Reserved © 2022 Anodic store</h6>
       <Nav>
         <Nav.Link>Privacy Policy</Nav.Link>
